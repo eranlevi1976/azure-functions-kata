@@ -26,12 +26,6 @@ public class MyFirstBlobTrigger {
 
         outputItem.setValue(content);
 
-        /*
-        //Delete the blob
-        String connectionString = System.getenv("storageConnectionString");
-        BlobServiceClient blobServiceClient = new BlobServiceClientBuilder().connectionString(connectionString).buildClient();
-        BlobContainerClient containerClient = blobServiceClient.getBlobContainerClient("katatest");
-        BlobClient blobClient = containerClient.getBlobClient(name);
-        blobClient.deleteIfExists();*/
+
     }
 }

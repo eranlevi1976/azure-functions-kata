@@ -12,9 +12,11 @@ public class MyFirstQueueTrigger {
      */
     @FunctionName("MyFirstQueueTrigger")
     public void run(
-        @QueueTrigger(name = "message", queueName = "test", connection = "connectionString") String message,
+        @QueueTrigger(name = "message", queueName = "kata-queue-1", connection = "storageConnectionString") String messageIn,
+        @QueueOutput(name = "message2", queueName = "kata-queue-2", connection = "storageConnectionString") OutputBinding<String> messageOut,
         final ExecutionContext context
     ) {
-        context.getLogger().info("Java Queue trigger function processed a message: " + message);
+        context.getLogger().info("Java Queue trigger function processed a message: " + messageIn);
+        messageOut.setValue(messageIn);
     }
 }

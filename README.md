@@ -20,4 +20,14 @@ Please follow the following steps:
 
     In the marketplcae choose and install the "Azure Toolkit for IntelliJ"
 
-3) Download the source code in this project, and open a new project using IntelliJ, and use this source code.
+3) Download the source code in this project by running the following commands , make sure you're not in AT&T VPN, otherwise it will not clone:
+
+   git clone https://github.com/eranlevi1976/azure-functions-kata.git
+   
+   git fetch origin skeleton
+   
+   git checkout skeleton
+
+   Then open a new project using IntelliJ, and use this source code.
+
+4) Ask me for updated local.settings.json, which contains all the relevant connection strings
